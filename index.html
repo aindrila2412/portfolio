@@ -1,502 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aindrila Das — Business Process Trainer, technologist, speaker, and community builder.">
-  <meta name="theme-color" content="#fffaf7">
-  <title>Aindrila Das — Trainer · Technologist · Community Builder</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --ink: #27213c;
-      --ink-soft: #645e72;
-      --paper: #fffaf7;
-      --surface: #ffffff;
-      --surface-alt: #f8f2f0;
-      --coral: #c94f60;
-      --coral-dark: #a93649;
-      --coral-soft: #f7dfe2;
-      --plum: #4e315f;
-      --gold: #d9943b;
-      --line: #eadedb;
-      --shadow: 0 18px 50px rgba(78, 49, 95, .10);
-      --radius: 24px;
-      --max: 1160px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aindrila Das — Business Process Trainer at Accenture. Training, consulting, process excellence, and community leadership." />
+    <meta name="theme-color" content="#2a1220" />
+    <title>Aindrila Das — Trainer · Consultant · Community Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('ad-theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-D7-4F5aH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-WVMbmSJ9.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: "DM Sans", system-ui, sans-serif;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: -2;
-      background:
-        radial-gradient(circle at 8% 7%, rgba(201,79,96,.12), transparent 25%),
-        radial-gradient(circle at 92% 30%, rgba(78,49,95,.09), transparent 23%);
-    }
-    img, svg { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-    button { font: inherit; }
-    :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
-    .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 999; padding: .8rem 1rem; background: var(--ink); color: white; border-radius: 10px; }
-    .skip-link:focus { top: 1rem; }
-    .container { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
-    .section { padding: 110px 0; }
-    .section.alt { background: rgba(248,242,240,.72); border-block: 1px solid rgba(234,222,219,.7); }
-    .section-tag { display: inline-flex; align-items: center; gap: .55rem; margin: 0 0 .8rem; color: var(--coral-dark); font-weight: 700; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; }
-    .section-tag::before { content: ""; width: 28px; height: 2px; background: currentColor; }
-    .section-title { margin: 0; max-width: 780px; font-family: "Manrope", sans-serif; font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.13; letter-spacing: -.04em; }
-    .section-intro { max-width: 720px; margin: 1rem 0 3rem; color: var(--ink-soft); font-size: 1.05rem; }
-    .eyebrow { display: inline-flex; align-items: center; gap: .55rem; padding: .42rem .78rem; border: 1px solid rgba(201,79,96,.23); border-radius: 999px; color: var(--coral-dark); background: rgba(255,255,255,.72); font-size: .82rem; font-weight: 700; }
-    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 5px rgba(201,79,96,.12); }
-
-    /* Navigation */
-    .site-header { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; transition: .25s ease; }
-    .site-header.scrolled { background: rgba(255,250,247,.88); border-bottom: 1px solid rgba(234,222,219,.9); backdrop-filter: blur(16px); }
-    .nav-wrap { height: 78px; display: flex; align-items: center; justify-content: space-between; }
-    .brand { display: inline-flex; align-items: center; gap: .72rem; font-family: "Manrope", sans-serif; font-weight: 800; letter-spacing: -.02em; }
-    .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: white; background: linear-gradient(135deg, var(--coral), var(--plum)); box-shadow: 0 7px 22px rgba(201,79,96,.23); font-size: .88rem; }
-    .nav-links { display: flex; align-items: center; gap: 1.55rem; padding: 0; margin: 0; list-style: none; }
-    .nav-links a { position: relative; color: var(--ink-soft); font-size: .87rem; font-weight: 600; }
-    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -.4rem; width: 100%; height: 2px; border-radius: 2px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
-    .nav-links a.active::after, .nav-links a:hover::after { transform: scaleX(1); }
-    .menu-btn { display: none; border: 0; background: transparent; width: 44px; height: 44px; border-radius: 12px; color: var(--ink); cursor: pointer; }
-    .menu-btn svg { margin: auto; }
-
-    /* Hero */
-    .hero { min-height: 100svh; display: grid; align-items: center; padding: 122px 0 70px; overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr); align-items: center; gap: clamp(3rem, 7vw, 7rem); }
-    .hero h1 { margin: 1.2rem 0 1.1rem; font-family: "Manrope", sans-serif; font-size: clamp(3.4rem, 8vw, 7.1rem); line-height: .96; letter-spacing: -.07em; }
-    .hero h1 span { display: block; color: var(--coral); }
-    .hero-lead { max-width: 650px; margin: 0; color: var(--ink-soft); font-size: clamp(1.08rem, 2vw, 1.32rem); }
-    .hero-lead strong { color: var(--ink); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0 2.1rem; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 49px; padding: .8rem 1.08rem; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); font-weight: 700; font-size: .9rem; transition: transform .2s, box-shadow .2s, border-color .2s, background .2s; }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(78,49,95,.12); border-color: rgba(201,79,96,.4); }
-    .btn.primary { color: white; background: var(--coral); border-color: var(--coral); }
-    .btn.primary:hover { background: var(--coral-dark); }
-    .btn svg { width: 18px; height: 18px; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: .7rem 1.2rem; color: var(--ink-soft); font-size: .86rem; }
-    .hero-meta span { display: inline-flex; align-items: center; gap: .4rem; }
-    .hero-meta svg { width: 17px; color: var(--coral); }
-    .portrait-card {
-      position: relative;
-      aspect-ratio: 1;
-      max-width: 380px;
-      justify-self: center;
-      width: 100%;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(145deg, #f3b8bc 0%, var(--coral) 48%, var(--plum) 100%);
-      box-shadow: var(--shadow), 0 14px 40px rgba(201,79,96,.18);
-    }
-    .portrait-card::before {
-      content: "";
-      position: absolute;
-      inset: -14px;
-      border: 1px solid rgba(201,79,96,.22);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .portrait-photo {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 18%;
-      display: block;
-      background: var(--surface-alt);
-      box-shadow: 0 0 0 3px rgba(255,255,255,.55);
-    }
-    .orbit { position: absolute; z-index: 0; border: 1px solid rgba(201,79,96,.28); border-radius: 50%; pointer-events: none; }
-    .orbit.one { width: 210px; height: 210px; right: -95px; top: 24px; }
-    .orbit.two { width: 120px; height: 120px; left: -54px; bottom: 18%; }
-    .role-chip { position: absolute; z-index: 2; left: -35px; bottom: 28px; max-width: 220px; padding: 1rem 1.1rem; border: 1px solid rgba(255,255,255,.85); border-radius: 16px; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); box-shadow: 0 12px 30px rgba(78,49,95,.14); }
-    .role-chip strong { display: block; font-size: .93rem; }
-    .role-chip span { color: var(--ink-soft); font-size: .78rem; }
-
-    /* About */
-    .about-grid { display: grid; grid-template-columns: .88fr 1.12fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
-    .about-copy p { color: var(--ink-soft); font-size: 1.03rem; }
-    .about-copy p:first-child { margin-top: 0; color: var(--ink); font-size: 1.17rem; }
-    .quick-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    .fact { padding: 1.3rem; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
-    .fact-icon { display: grid; place-items: center; width: 39px; height: 39px; margin-bottom: .8rem; border-radius: 12px; color: var(--coral); background: var(--coral-soft); }
-    .fact-icon svg { width: 19px; }
-    .fact strong { display: block; font-size: .9rem; }
-    .fact span { color: var(--ink-soft); font-size: .83rem; line-height: 1.45; display: block; margin-top: .18rem; }
-    .interests { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; }
-    .pill { padding: .42rem .72rem; border-radius: 999px; background: var(--surface-alt); border: 1px solid var(--line); color: var(--ink-soft); font-size: .8rem; font-weight: 600; }
-
-    /* Timeline */
-    .timeline { position: relative; margin-top: 3.2rem; }
-    .timeline::before { content: ""; position: absolute; left: 19px; top: 10px; bottom: 10px; width: 1px; background: var(--line); }
-    .timeline-item { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 1.5rem; padding-bottom: 2rem; }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-dot { position: relative; z-index: 1; width: 15px; height: 15px; margin: 9px auto 0; border: 4px solid var(--paper); border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 1px var(--coral); }
-    .timeline-card { padding: 1.65rem 1.8rem; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); transition: .25s; }
-    .timeline-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .job-head { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; margin-bottom: .8rem; }
-    .job-head h3 { margin: 0; font-family: "Manrope"; font-size: 1.15rem; }
-    .company { color: var(--coral-dark); font-weight: 700; font-size: .88rem; }
-    .date { flex: 0 0 auto; padding: .34rem .65rem; border-radius: 999px; background: var(--surface-alt); color: var(--ink-soft); font-size: .77rem; font-weight: 600; }
-    .timeline-card ul { margin: .7rem 0 0; padding-left: 1.15rem; color: var(--ink-soft); }
-    .timeline-card li { margin: .32rem 0; }
-
-    /* Community */
-    .community-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
-    .community-card { grid-column: span 4; min-height: 235px; padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); transition: .25s ease; }
-    .community-card:nth-child(1), .community-card:nth-child(4) { grid-column: span 6; }
-    .community-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: rgba(201,79,96,.34); }
-    .community-card .number { margin-bottom: 1.2rem; color: rgba(201,79,96,.38); font: 800 2.3rem/1 "Manrope"; letter-spacing: -.05em; }
-    .community-card h3 { margin: 0 0 .5rem; font-family: "Manrope"; font-size: 1.04rem; line-height: 1.35; }
-    .community-card p { margin: 0; color: var(--ink-soft); font-size: .89rem; }
-    .community-card.featured { color: white; border-color: transparent; background: linear-gradient(135deg, var(--plum), #744667); }
-    .community-card.featured p { color: rgba(255,255,255,.74); }
-    .community-card.featured .number { color: rgba(255,255,255,.28); }
-
-    /* Projects */
-    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
-    .project-card { position: relative; overflow: hidden; min-height: 300px; padding: 2rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: flex-end; }
-    .project-card::before { content: ""; position: absolute; width: 185px; height: 185px; right: -65px; top: -65px; border-radius: 50%; background: var(--coral-soft); transition: transform .4s; }
-    .project-card:nth-child(2)::before { background: #e8def1; }
-    .project-card:nth-child(3)::before { background: #f4e5ca; }
-    .project-card:nth-child(4)::before { background: #dceae3; }
-    .project-card:hover::before { transform: scale(1.18); }
-    .project-icon { position: absolute; right: 1.7rem; top: 1.7rem; z-index: 1; display: grid; place-items: center; width: 55px; height: 55px; border-radius: 17px; background: rgba(255,255,255,.78); color: var(--coral); backdrop-filter: blur(10px); }
-    .project-icon svg { width: 26px; }
-    .project-card h3 { position: relative; margin: 0 0 .45rem; font: 700 1.28rem/1.3 "Manrope"; }
-    .project-card p { position: relative; margin: 0; color: var(--ink-soft); }
-    .tech { position: relative; margin-top: .9rem; color: var(--coral-dark); font-size: .8rem; font-weight: 700; }
-
-    /* Skills */
-    .skills-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
-    .skill-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    .skill-group { padding: 1.4rem; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
-    .skill-group h3 { margin: 0 0 .65rem; font: 700 .94rem/1.3 "Manrope"; }
-    .skill-group p { margin: 0; color: var(--ink-soft); font-size: .87rem; }
-    .education-card { margin-top: 2rem; padding: 1.55rem; border-left: 3px solid var(--coral); background: var(--surface); border-radius: 0 18px 18px 0; }
-    .education-card h3 { margin: 0; font: 700 1rem/1.4 "Manrope"; }
-    .education-card p { margin: .35rem 0 0; color: var(--ink-soft); font-size: .88rem; }
-    .course-list { font-size: .82rem !important; }
-
-    /* Recognition */
-    .recognition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-    .recognition-block { padding: 1.8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-    .recognition-block h3 { display: flex; align-items: center; gap: .7rem; margin: 0 0 1.25rem; font-family: "Manrope"; }
-    .recognition-block h3 span { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: var(--coral-soft); color: var(--coral); }
-    .recognition-block svg { width: 18px; }
-    .clean-list { list-style: none; padding: 0; margin: 0; }
-    .clean-list li { display: flex; gap: .8rem; padding: .76rem 0; color: var(--ink-soft); border-bottom: 1px solid var(--line); font-size: .9rem; }
-    .clean-list li:last-child { border-bottom: 0; }
-    .clean-list li::before { content: "◆"; color: var(--coral); font-size: .55rem; padding-top: .38rem; }
-    .volunteer-note { margin-top: 1.2rem; padding: 1rem 1.2rem; border-radius: 14px; background: var(--surface-alt); color: var(--ink-soft); font-size: .88rem; }
-    .volunteer-note strong { color: var(--ink); }
-
-    /* Contact */
-    .contact-card { position: relative; overflow: hidden; padding: clamp(2rem, 6vw, 5rem); border-radius: 34px; color: white; background: linear-gradient(135deg, #442950, #6a3c5e 58%, #9f4556); box-shadow: var(--shadow); }
-    .contact-card::after { content: ""; position: absolute; width: 390px; height: 390px; right: -140px; bottom: -210px; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.035), 0 0 0 110px rgba(255,255,255,.025); }
-    .contact-card .section-tag { color: #ffc8ce; }
-    .contact-card h2 { position: relative; z-index: 1; margin: 0; max-width: 760px; font: 800 clamp(2.2rem, 5vw, 4.1rem)/1.08 "Manrope"; letter-spacing: -.05em; }
-    .contact-card > p { position: relative; z-index: 1; max-width: 650px; margin: 1rem 0 2rem; color: rgba(255,255,255,.74); }
-    .contact-links { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .8rem; }
-    .contact-links a { display: inline-flex; align-items: center; gap: .55rem; padding: .75rem 1rem; border: 1px solid rgba(255,255,255,.22); border-radius: 13px; background: rgba(255,255,255,.09); font-weight: 600; font-size: .87rem; transition: .2s; }
-    .contact-links a:hover { background: white; color: var(--plum); transform: translateY(-2px); }
-    .contact-links svg { width: 18px; }
-    .phone { position: relative; z-index: 1; margin-top: 1.2rem; color: rgba(255,255,255,.66); font-size: .86rem; }
-
-    footer { padding: 2.2rem 0; }
-    .footer-wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--ink-soft); font-size: .84rem; }
-    .back-top { color: var(--coral-dark); font-weight: 700; }
-    .toast { position: fixed; z-index: 200; left: 50%; bottom: 28px; transform: translate(-50%, 20px); padding: .8rem 1rem; color: white; background: var(--ink); border-radius: 12px; box-shadow: var(--shadow); font-size: .86rem; opacity: 0; pointer-events: none; transition: .25s; }
-    .toast.show { opacity: 1; transform: translate(-50%, 0); }
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    @media (max-width: 920px) {
-      .menu-btn { display: block; }
-      .nav-links { position: fixed; top: 68px; left: 20px; right: 20px; display: grid; gap: 0; padding: .7rem; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,250,247,.98); box-shadow: var(--shadow); transform: translateY(-12px) scale(.98); opacity: 0; visibility: hidden; transition: .2s; }
-      .nav-links.open { transform: none; opacity: 1; visibility: visible; }
-      .nav-links a { display: block; padding: .72rem .85rem; border-radius: 10px; }
-      .nav-links a:hover, .nav-links a.active { background: var(--surface-alt); }
-      .nav-links a::after { display: none; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-copy { text-align: center; }
-      .hero-lead { margin-inline: auto; }
-      .hero-actions, .hero-meta { justify-content: center; }
-      .portrait-card { max-width: 320px; }
-      .role-chip { left: -15px; }
-      .about-grid, .skills-wrap { grid-template-columns: 1fr; }
-      .community-card { grid-column: span 6; }
-      .community-card:nth-child(4) { grid-column: span 6; }
-    }
-    @media (max-width: 650px) {
-      .container { width: min(calc(100% - 28px), var(--max)); }
-      .section { padding: 82px 0; }
-      .hero { padding-top: 104px; }
-      .hero h1 { font-size: clamp(3rem, 17vw, 5rem); }
-      .hero-actions .btn { flex: 1 1 calc(50% - .8rem); }
-      .portrait-card { max-width: 260px; }
-      .role-chip { left: 10px; right: 10px; bottom: 14px; max-width: none; }
-      .quick-facts, .project-grid, .skill-groups, .recognition-grid { grid-template-columns: 1fr; }
-      .community-card, .community-card:nth-child(1), .community-card:nth-child(4) { grid-column: 1 / -1; min-height: auto; }
-      .job-head { display: block; }
-      .date { display: inline-block; margin-top: .55rem; }
-      .timeline-item { gap: .8rem; grid-template-columns: 26px 1fr; }
-      .timeline::before { left: 12px; }
-      .timeline-card { padding: 1.25rem; }
-      .footer-wrap { flex-direction: column; text-align: center; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-      .reveal { opacity: 1; transform: none; }
-    }
-  </style>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header" id="site-header">
-    <nav class="container nav-wrap" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="Aindrila Das — home">
-        <span class="brand-mark">AD</span><span>Aindrila Das</span>
-      </a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
-        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal visible">
-          <span class="eyebrow"><span class="dot"></span> Learning, leading &amp; building community</span>
-          <h1 id="hero-title">Aindrila <span>Das.</span></h1>
-          <p class="hero-lead"><strong>Business Process Trainer at Accenture.</strong> Computer Science graduate, trainer, community builder, speaker, and voice artist turning complex ideas into meaningful human experiences.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="mailto:aindriladas24@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Email me</a>
-            <a class="btn" href="https://www.linkedin.com/in/aindrila-das24/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9v9M6 6.2v.1M10 18v-5c0-2 1.2-3.2 3-3.2s3 1.1 3 3.2v5M10 10v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>LinkedIn</a>
-            <a class="btn" href="https://github.com/aindrila2412" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18c-4.2 1.3-4.2-2.2-6-2.7M15 21v-3.4c0-1 .1-1.5-.5-2.2 2.8-.3 5.7-1.4 5.7-6.2A4.8 4.8 0 0019 5.9 4.5 4.5 0 0018.9 3S17.8 2.7 15 4a11 11 0 00-6 0C6.2 2.7 5.1 3 5.1 3A4.5 4.5 0 005 5.9a4.8 4.8 0 00-1.2 3.3c0 4.8 2.9 5.9 5.7 6.2-.4.4-.6.8-.6 1.6v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>GitHub</a>
-            <a class="btn resume-placeholder" href="#" aria-label="Download résumé — coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Résumé</a>
-          </div>
-          <div class="hero-meta">
-            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1116 0zM12 10a2.4 2.4 0 100-4.8A2.4 2.4 0 0012 10z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>India</span>
-            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>aindriladas24@gmail.com</span>
-          </div>
+    <header class="site-header" id="site-header">
+      <nav class="container nav" aria-label="Primary">
+        <a class="brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">AD</span>
+          <span>Aindrila Das</span>
+        </a>
+        <div class="nav-actions">
+          <button class="theme-toggle magnetic" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+          </button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
         </div>
-        <div class="portrait-card reveal" aria-label="Portrait of Aindrila Das">
-          <img class="portrait-photo" src="profile.jpg" alt="Aindrila Das" width="400" height="400">
-          <span class="orbit one" aria-hidden="true"></span><span class="orbit two" aria-hidden="true"></span>
-          <div class="role-chip"><strong>Business Process Trainer</strong><span>Accenture · June 2025 — Present</span></div>
-        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main"></main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© 2026 Aindrila Das. Local preview only — not deployed.</p>
+        <a href="#home">Back to top ↑</a>
       </div>
-    </section>
-
-    <section class="section alt" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <p class="section-tag reveal">About</p>
-        <div class="about-grid">
-          <div class="reveal">
-            <h2 class="section-title" id="about-title">Curious by nature.<br>People-first by choice.</h2>
-            <div class="quick-facts" style="margin-top:2rem">
-              <div class="fact"><span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 3v4m8-4v4M4 9h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><strong>Current role</strong><span>Business Process Trainer at Accenture</span></div>
-              <div class="fact"><span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5zm3 3v5c3 2.4 9 2.4 12 0v-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><strong>Education</strong><span>B.Tech CSE (Honours), CGPA 8.87</span></div>
-              <div class="fact"><span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 0114 0v4a2 2 0 01-2 2h-2v-6h4M5 12v6H3a2 2 0 01-2-2v-4a11 11 0 0122 0v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><strong>Creative practice</strong><span>Trained voice artist, radio &amp; voice acting</span></div>
-              <div class="fact"><span class="fact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s8-4.5 8-11a4.5 4.5 0 00-8-2.8A4.5 4.5 0 004 10c0 6.5 8 11 8 11z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span><strong>What matters</strong><span>Learning, empathy, communities &amp; impact</span></div>
-            </div>
-          </div>
-          <div class="about-copy reveal">
-            <p>Aindrila completed her B.Tech in Computer Science and Engineering with Honours and now works as a Business Process Trainer at Accenture.</p>
-            <p>Previously, she worked as an Associate Project Consultant at Cvent and as a Senior Analyst in Technology Consulting at EY India. Across roles, she brings clarity to complexity, communicates with empathy, and works effectively both independently and as part of a team.</p>
-            <p>Beyond work, Aindrila speaks at conferences, builds communities around the globe, and follows her passion for radio and voice acting as a trained voice artist. She loves reading, travelling, and meeting people from diverse backgrounds.</p>
-            <div class="interests" aria-label="Interests">
-              <span class="pill">Poetry &amp; recitation</span><span class="pill">Guitar</span><span class="pill">Singing</span><span class="pill">Swimming</span><span class="pill">Chess</span><span class="pill">Rollerskating</span><span class="pill">Travel</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="experience" aria-labelledby="experience-title">
-      <div class="container">
-        <p class="section-tag reveal">Experience</p>
-        <h2 class="section-title reveal" id="experience-title">Where technology meets people.</h2>
-        <p class="section-intro reveal">A journey across training, customer experiences, consulting, and digital transformation.</p>
-        <div class="timeline">
-          <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Business Process Trainer</h3><div class="company">Accenture</div></div><span class="date">June 2025 — Present</span></div><ul><li>Deliver structured training, workshops, and knowledge-sharing for teams, simplifying complex processes and customer-facing workflows.</li><li>Conduct data deep dives and quality/process audits; present actionable insights to stakeholders.</li><li>Facilitate huddles on customer experience, communication, empathy, troubleshooting, and escalations.</li><li>Collaborate with trainers and stakeholders on continuous improvement in an inclusive, people-focused environment.</li></ul></div></article>
-          <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Associate Project Consultant</h3><div class="company">Cvent India</div></div><span class="date">Sep 2024 — May 2025</span></div><ul><li>Translated enterprise event requirements into customized websites on Cvent’s platform.</li><li>Collaborated across the development lifecycle and configured sites around event objectives.</li><li>Guided clients on platform capabilities while managing multiple concurrent priorities.</li><li>Designed and delivered onboarding that increased user adoption by 30%; recognized for quickly resolving critical issues.</li></ul></div></article>
-          <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Senior Analyst, Technology Consulting</h3><div class="company">Ernst &amp; Young LLP</div></div><span class="date">July 2023 — Sep 2024</span></div><ul><li>Partnered with global clients on digital transformation, cloud migration, and technology adoption.</li><li>Led a cross-functional team of 8+ and delivered 10+ projects on time and within budget, improving delivery efficiency by about 20% and client satisfaction by about 15%.</li><li>Introduced Agile practices and communicated complex technical updates clearly to diverse stakeholders.</li></ul></div></article>
-          <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Technology Consulting Trainee</h3><div class="company">Ernst &amp; Young LLP · Internship</div></div><span class="date">Feb 2023 — June 2023</span></div><ul><li>Provided technical support, documentation, and issue resolution while collaborating with senior consultants and clients.</li></ul></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="community" aria-labelledby="community-title">
-      <div class="container">
-        <p class="section-tag reveal">Community</p>
-        <h2 class="section-title reveal" id="community-title">Growing by helping others grow.</h2>
-        <p class="section-intro reveal">From campus study jams to global developer programs, community is a defining part of Aindrila’s story.</p>
-        <div class="community-grid">
-          <article class="community-card featured reveal"><div class="number">01</div><h3>Co-organizer · Google Developer Groups Kolkata</h3><p>Organized DevFest Kolkata, one of the biggest developer conferences in Eastern India.</p></article>
-          <article class="community-card reveal"><div class="number">02</div><h3>Google Cloud Champion Innovator / Facilitator</h3><p>Recognized among the top 173 champions globally; contributed through events, YouTube content, and open source.</p></article>
-          <article class="community-card reveal"><div class="number">03</div><h3>Microsoft Learn Gold Student Ambassador</h3><p>Led workshops and community initiatives while developing technical and interpersonal skills.</p></article>
-          <article class="community-card featured reveal"><div class="number">04</div><h3>Lead · Google Developer Student Clubs</h3><p>Established the first GDSC on campus and taught 1,000+ students through workshops and study jams.</p></article>
-          <article class="community-card reveal"><div class="number">05</div><h3>Postman Student Leader</h3><p>Led practical API workshops for peers.</p></article>
-          <article class="community-card reveal"><div class="number">06</div><h3>Microsoft Azure Hackathon Judge</h3><p>Judged TechTogether hackathons in Boston, Atlanta, and Chicago with Microsoft Advocacy.</p></article>
-          <article class="community-card reveal"><div class="number">07</div><h3>Women Techmakers Ambassador</h3><p>Part of a global network uplifting women in technology.</p></article>
-          <article class="community-card reveal"><div class="number">08</div><h3>Road to GDE Mentee</h3><p>Selected among the top 42 from thousands of applications.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <p class="section-tag reveal">Projects</p>
-        <h2 class="section-title reveal" id="projects-title">Ideas made tangible.</h2>
-        <p class="section-intro reveal">Selected work spanning conversational AI, accessibility, safety, and hands-on learning.</p>
-        <div class="project-grid">
-          <article class="project-card reveal"><span class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14v10H5zM9 4h6v4M9 13h.1M15 13h.1M9 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Web App Bot</h3><p>A conversational web bot built with cloud-based machine learning and natural-language understanding.</p><div class="tech">Azure ML · Bot Framework · Botbuilder SDKs · Node.js · LUIS</div></article>
-          <article class="project-card reveal"><span class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a4 4 0 004-4V7a4 4 0 10-8 0v4a4 4 0 004 4zm-7-4a7 7 0 0014 0M12 18v3M9 21h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>AI Voice Assistant</h3><p>A Python assistant designed to understand and act on natural-language voice commands.</p><div class="tech">Python · Natural-language voice interaction</div></article>
-          <article class="project-card reveal"><span class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s8-4 8-11V5l-8-3-8 3v5c0 7 8 11 8 11zm0-13v5m0 3h.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Women Safety Android App</h3><p>A mobile safety toolkit with location sharing, alerts, EMS support, and a panic button.</p><div class="tech">Android · Location services · Emergency alerts</div></article>
-          <article class="project-card reveal"><span class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 13h6v6h-6zM7 11v5h7M17 13V8h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Drag-and-drop ML Learning Environment</h3><p>A Scratch-like workspace for building ML pipelines, supported by approachable tutorials.</p><div class="tech">Python · JavaScript · Machine learning education</div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="skills" aria-labelledby="skills-title">
-      <div class="container skills-wrap">
-        <div class="reveal">
-          <p class="section-tag">Skills &amp; education</p>
-          <h2 class="section-title" id="skills-title">Skills from training, consulting, and community.</h2>
-          <p class="section-intro">Facilitation, client work, process improvement, and community leadership — grounded in a Computer Science degree.</p>
-          <div class="education-card"><h3>B.Tech, Computer Science &amp; Engineering</h3><p>Dr. Sudhir Chandra Sur Institute of Technology (MAKAUT)</p><p>Aug 2019 — July 2023 · Honours · CGPA 8.87</p><p class="course-list">Coursework: OS, DSA, Algorithms, AI, ML, Networking, Databases</p></div>
-        </div>
-        <div class="skill-groups">
-          <article class="skill-group reveal"><h3>Customer &amp; Community</h3><p>Customer management, community building, stakeholder collaboration</p></article>
-          <article class="skill-group reveal"><h3>Data &amp; Problem Solving</h3><p>SQL, Python, Power BI, analysis, process improvement</p></article>
-          <article class="skill-group reveal"><h3>Communication</h3><p>Facilitation, training, public speaking, knowledge sharing</p></article>
-          <article class="skill-group reveal"><h3>Cloud</h3><p>Google Cloud Platform, Microsoft Azure, AWS</p></article>
-          <article class="skill-group reveal"><h3>Programming</h3><p>Java, JavaScript, Kotlin, Python, C</p></article>
-          <article class="skill-group reveal"><h3>Technology</h3><p>Android &amp; web development, AI and machine learning</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="awards" aria-labelledby="awards-title">
-      <div class="container">
-        <p class="section-tag reveal">Recognition</p>
-        <h2 class="section-title reveal" id="awards-title">Milestones along the way.</h2>
-        <p class="section-intro reveal">Selected awards, scholarships, and credentials reflecting a commitment to continuous learning.</p>
-        <div class="recognition-grid">
-          <article class="recognition-block reveal"><h3><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.3 4.7 5.2.8-3.8 3.7.9 5.2-4.6-2.5-4.6 2.5.9-5.2-3.8-3.7 5.2-.8z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>Awards &amp; scholarships</h3><ul class="clean-list"><li>AWS ML Scholar</li><li>GirlScript Data Science Scholar</li><li>Generation Google Scholarship Semifinalist</li><li>Google Venkat Panchapakesan Scholarship Semifinalist</li><li>Microsoft Windows Insider MVP Nominee</li></ul></article>
-          <article class="recognition-block reveal"><h3><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>Notable certifications</h3><ul class="clean-list"><li>Microsoft Azure Fundamentals (AZ-900)</li><li>LinkedIn Marketing Insider</li><li>Google Digital Marketing</li><li>Power BI · Edureka</li><li>IBM Introduction to Cloud</li><li>Agile &amp; Scrum Fundamentals</li><li>CockroachDB Practical First Steps</li></ul></article>
-        </div>
-        <div class="volunteer-note reveal"><strong>In service:</strong> Volunteer with Hamari Pahchan NGO and Prashraya Welfare Foundation.</div>
-      </div>
-    </section>
-
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="contact-card reveal">
-          <p class="section-tag">Contact</p>
-          <h2 id="contact-title">Let’s create something meaningful together.</h2>
-          <p>Whether it’s a conversation about training, technology, communities, speaking, or voice work, Aindrila would love to hear from you.</p>
-          <div class="contact-links">
-            <a href="mailto:aindriladas24@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>aindriladas24@gmail.com</a>
-            <a href="mailto:aindrila.msba@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>aindrila.msba@gmail.com</a>
-            <a href="https://www.linkedin.com/in/aindrila-das24/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="https://github.com/aindrila2412" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          </div>
-          <div class="phone">Phone: +91 81789 85848</div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="container footer-wrap"><span>© 2026 Aindrila Das. Built with purpose and a little coral.</span><a class="back-top" href="#home">Back to top ↑</a></div></footer>
-  <div class="toast" role="status" aria-live="polite">Résumé download will be available soon.</div>
-
-  <script>
-    const header = document.querySelector('.site-header');
-    const menuButton = document.querySelector('.menu-btn');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = [...document.querySelectorAll('.nav-links a')];
-    const sections = [...document.querySelectorAll('main section[id]')];
-
-    const setHeader = () => header.classList.toggle('scrolled', window.scrollY > 16);
-    setHeader();
-    window.addEventListener('scroll', setHeader, { passive: true });
-
-    menuButton.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      menuButton.setAttribute('aria-expanded', String(open));
-      menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-    });
-    navLinks.forEach(link => link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open navigation menu');
-    }));
-    document.addEventListener('click', event => {
-      if (!nav.contains(event.target) && !menuButton.contains(event.target)) {
-        nav.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
-
-    const sectionObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
-        }
-      });
-    }, { rootMargin: '-30% 0px -62% 0px' });
-    sections.forEach(section => sectionObserver.observe(section));
-
-    const toast = document.querySelector('.toast');
-    document.querySelector('.resume-placeholder').addEventListener('click', event => {
-      event.preventDefault();
-      toast.classList.add('show');
-      window.setTimeout(() => toast.classList.remove('show'), 2600);
-    });
-  </script>
-</body>
+    </footer>
+  </body>
 </html>
