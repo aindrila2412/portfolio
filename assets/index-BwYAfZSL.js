@@ -57,7 +57,7 @@
         <p>Aindrila completed her B.Tech in Computer Science and Engineering with Honours and now works as a Business Process Trainer at Accenture.</p>
 <p>Previously, she worked as an Associate Project Consultant at Cvent and as a Senior Analyst in Technology Consulting at EY India. Across roles, she brings clarity to complexity, communicates with empathy, and works effectively both independently and as part of a team.</p>
 <p>Beyond work, Aindrila speaks at conferences, builds communities around the globe, and follows her passion for radio and voice acting as a trained voice artist. She loves reading, travelling, and meeting people from diverse backgrounds.</p>
-        <div class="interest-row" aria-label="Interests"><span class="chip">Reading</span><span class="chip">Poetry &amp; recitation</span><span class="chip">Guitar</span><span class="chip">Singing</span><span class="chip">Swimming</span><span class="chip">Chess</span><span class="chip">Rollerskating</span><span class="chip">Travel</span></div>
+        <div class="interest-row" aria-label="Interests"><span class="chip">Reading</span><span class="chip">Mentoring</span><span class="chip">Public speaking</span><span class="chip">Poetry &amp; recitation</span><span class="chip">Guitar</span><span class="chip">Singing</span><span class="chip">Swimming</span><span class="chip">Chess</span><span class="chip">Rollerskating</span><span class="chip">Travel</span></div>
       </div>
     </div>
   </div>
